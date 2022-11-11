@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,6 +9,12 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OpenSalt.Authenticator-core\OpenSalt.Authenticator-core.csproj" />
+    <ProjectReference Include="..\OpenSalt.Authenticator-infrastructure\OpenSalt.Authenticator-infrastructure.csproj" />
+    <ProjectReference Include="..\OpenSalt.Authenticator-models\OpenSalt.Authenticator-models.csproj" />
   </ItemGroup>
 
 </Project>

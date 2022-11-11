@@ -14,3 +14,6 @@
 /OpenSalt.Authenticator/OpenSalt.Authenticator-api/obj/Debug/net6.0
 /OpenSalt.Authenticator/OpenSalt.Authenticator-core/obj/Debug/net6.0
 /OpenSalt.Authenticator/OpenSalt.Authenticator-models/obj/Debug/net6.0
+/OpenSalt.Authenticator/.vs/OpenSalt.Authenticator/config
+/OpenSalt.Authenticator/OpenSalt.Authenticator-infrastructure/bin/Debug/net6.0
+/OpenSalt.Authenticator/OpenSalt.Authenticator-infrastructure/obj
