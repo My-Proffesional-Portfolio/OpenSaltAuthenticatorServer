@@ -39,7 +39,7 @@ namespace OpenSalt.Authenticator_core.Backend.Services
         {
 
             //string secretKey = UtilService.GetAppSettingsConfiguration("security", "passwordPrivateKey");
-            string secretKey = "ABC123";
+            string secretKey = secretPasswordKey;
             var saltValue = Guid.NewGuid().ToString();
             var saltBuffer = Encoding.UTF8.GetBytes(saltValue);
             byte[] clearBytes = Encoding.Unicode.GetBytes(password);
@@ -137,7 +137,7 @@ namespace OpenSalt.Authenticator_core.Backend.Services
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var expiration = DateTime.Now.AddDays(365);
 
-            var token = new JwtSecurityToken("e-colonies-auth",
+            var token = new JwtSecurityToken("openSalt.auth",
               tokenAudience, claims: permClaims,
               null,
               expires: expiration,
@@ -175,7 +175,7 @@ namespace OpenSalt.Authenticator_core.Backend.Services
             try
             {
                 //string secretKey = UtilService.GetAppSettingsConfiguration("security", "passwordPrivateKey");
-                string secretKey = "ABC123";
+                string secretKey = secretPasswordKey;
                 var saltBuffer = Encoding.UTF8.GetBytes(salt);
                 hashedPassword = hashedPassword.Replace(" ", "+");
                 string password = string.Empty;
