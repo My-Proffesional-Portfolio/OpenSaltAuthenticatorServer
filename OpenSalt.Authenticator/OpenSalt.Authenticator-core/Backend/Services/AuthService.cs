@@ -165,7 +165,7 @@ namespace OpenSalt.Authenticator_core.Backend.Services
             {
                 tokenAudience = selectedClientKey.FirstOrDefault().Key,
                 privateKey = jwtKey,
-                tokenIssuer = "e-auth-provider"
+                tokenIssuer = "openSalt.auth"
 
             };
         }
